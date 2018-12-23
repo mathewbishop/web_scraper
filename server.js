@@ -23,4 +23,12 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 //============================================================
 // Listener
 //============================================================
+const scrape = require("./controller/scraper");
+
+app.get("/scrape", (req, res) => {
+    scrape();
+    res.end()
+})
+
+
 app.listen(PORT, () => { console.log(`Server listening on PORT ${PORT}`)})

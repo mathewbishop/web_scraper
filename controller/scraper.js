@@ -16,16 +16,25 @@ function scrape() {
             let headline = $(element).children("a").text();
             let url = $(element).children("a").attr("href");
 
-            if (headline && url) {
-                db.news.insert({
-                    headline: headline,
-                    url: url
-                },
-                (err, inserted) => {
-                    if (err) { console.log(err) }
-                    else { console.log(inserted) }
-                })
-            }
+            // if (headline && url) {
+            //     db.news.insert({
+            //         headline: headline,
+            //         url: url
+            //     },
+            //     (err, inserted) => {
+            //         if (err) { console.log(err) }
+            //         else { console.log(inserted) }
+            //     })
+            // }
+            // else { console.log("No data scraped.") }
+            db.news.insert({
+                headline: headline,
+                url: url
+            },
+            (err, inserted) => {
+                if (err) { console.log(err) }
+                else { console.log(inserted) }
+            })
         })
     })
 }
