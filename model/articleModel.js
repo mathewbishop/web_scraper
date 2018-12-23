@@ -7,6 +7,8 @@ const mongoose = require("mongoose");
 //============================================================
 const Schema = mongoose.Schema;
 //============================================================
+// Article Schema 
+//============================================================
 const articleSchema = new Schema({
     headline: {
         type: String,
