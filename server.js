@@ -16,6 +16,8 @@ app.use(express.json());
 //============================================================
 // MongoDB Connection
 //============================================================
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/web_scraperDB";
+mongoose.connect(MONGODB_URI);
 //============================================================
 // Listener
 //============================================================
