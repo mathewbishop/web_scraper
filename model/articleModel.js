@@ -2,6 +2,7 @@
 // Dependencies
 //============================================================
 const mongoose = require("mongoose");
+const uniqueValidator = require("mongoose-unique-validator");
 //============================================================
 // Reference to Mongoose Schema constructor
 //============================================================
@@ -12,7 +13,8 @@ const Schema = mongoose.Schema;
 const articleSchema = new Schema({
     headline: {
         type: String,
-        trim: true
+        trim: true,
+        unique: true
     },
     summary: {
         type: String,
@@ -29,6 +31,8 @@ const articleSchema = new Schema({
         }
     ]
 })
+
+articleSchema.plugin(uniqueValidator);
 
 const Article = mongoose.model("Article", articleSchema);
 

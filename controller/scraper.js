@@ -23,11 +23,10 @@ function scrape() {
                 url: url
             })
 
-            console.log(article)
-            // article.save((err, article) => {
-            //     if (err) return console.log(err);
-            //     console.log(article)
-            // })
+
+            article.save((err) => {
+                if (err) return console.log(err);
+            })
             
         })
     })
