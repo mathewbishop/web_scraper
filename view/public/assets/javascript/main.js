@@ -1,3 +1,5 @@
+import Axios from "axios";
+
 //============================================================
 // Vue Instance
 //============================================================
@@ -7,6 +9,8 @@ const vm = new Vue({
         articles: []
     },
     methods: {
-        
+        fetchArticles: function() {
+            axios.get("")
+        }
     }
 })
