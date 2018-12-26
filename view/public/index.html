@@ -33,10 +33,11 @@
             <section class="comment--section">
                 <div class="comments" v-for="comment in article.comments">
                     <p>{{ comment }}</p>
+                    <button class="btn--delete">X</button>
                 </div>
                 <form class="add--comment">
                     <textarea id="comment--box" cols="30" rows="10"></textarea>
-                    <button type="submit">Submit</button>
+                    <button @click="postComment(article._id)" type="submit">Submit</button>
                 </form>
             </section>
 

@@ -25,8 +25,9 @@ router.get("/articles", (req, res) => {
 //============================================================
 // POST Comment
 //============================================================
-router.post("", (req, res) => {
-
+router.post("/comment", (req, res) => {
+    console.log(req.body)
+    res.end()
 })
 
 module.exports = router;

@@ -17,6 +17,21 @@ const vm = new Vue({
                 })
             })
             .catch(err => console.log(err))
+        },
+        postComment: function(id) {
+            event.preventDefault()
+            let newComment = {
+                comment: document.getElementById("comment--box").value,
+                id: id
+            } 
+            console.log(newComment)
+            fetch("/comment", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newComment)
+            })
+
+
         }
     }
 })
