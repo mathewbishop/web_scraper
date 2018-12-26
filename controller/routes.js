@@ -26,7 +26,16 @@ router.get("/articles", (req, res) => {
 // POST Comment
 //============================================================
 router.post("/comment", (req, res) => {
-    console.log(req.body)
+    let id = req.body.id
+    let comment = req.body.comment
+    // Article.where({ _id: id }).update({ $push: { "comments": comment }})
+    Article.updateOne(
+        { _id: id },
+        { $push: { comments: comment } },
+        (err) => {
+            if (err) console.log(err)
+        }
+    )
     res.end()
 })
 

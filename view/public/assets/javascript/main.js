@@ -30,8 +30,6 @@ const vm = new Vue({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newComment)
             })
-
-
         }
     }
 })
