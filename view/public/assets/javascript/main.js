@@ -32,6 +32,12 @@ const vm = new Vue({
             })
             document.getElementById("comment--form").reset()
             thisArticleComments.push(newComment.comment)
+        },
+        deleteComment: function(id, thisArticleComments, comment) {
+            
+            let commentsArray = thisArticleComments
+            let index = commentsArray.indexOf(comment)
+            commentsArray.splice(index, 1)
         }
     }
 })

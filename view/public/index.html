@@ -33,7 +33,7 @@
             <section class="comment--section">
                 <div class="comments" v-for="comment in article.comments">
                     <p>{{ comment }}</p>
-                    <button class="btn--delete">X</button>
+                    <button @click="deleteComment(article._id, article.comments, comment)" class="btn--delete">X</button>
                 </div>
                 <form id="comment--form">
                     <textarea id="comment--box" cols="30" rows="10"></textarea>
