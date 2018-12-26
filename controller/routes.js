@@ -17,8 +17,9 @@ router.get("/scrape", (req, res) => {
 // Get Articles from Database
 //============================================================
 router.get("/articles", (req, res) => {
-    let newsArticles = Article.find()
+    let newsArticles = Article.find({})
     res.json(newsArticles);
+    // res.end()
 })
 
 module.exports = router;
