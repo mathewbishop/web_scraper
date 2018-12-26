@@ -23,10 +23,10 @@
 
     <!-- MAIN/APP -->
     <main id="app">
-
+        <div v-for="article in articles">
         <!-- ARTICLE -->
         <article>
-            <h1></h1>
+            <h1>{{ article.headline }}</h1>
             <a href=""></a>
 
             <!-- COMMENT SECTION -->
@@ -39,9 +39,9 @@
             </section>
 
         </article>
-
+        </div>
     </main>
-    
+
     <!-- FOOTER -->
     <footer>
         <small>Currently scraping from <a href="https://techreport.com/">The Tech Report</a></small>

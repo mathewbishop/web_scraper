@@ -22,5 +22,11 @@ router.get("/articles", (req, res) => {
         res.json(articles)
     })
 })
+//============================================================
+// POST Comment
+//============================================================
+router.post("", (req, res) => {
+
+})
 
 module.exports = router;
