@@ -17,9 +17,9 @@ router.get("/scrape", (req, res) => {
 // Get Articles from Database
 //============================================================
 router.get("/articles", (req, res) => {
-    Article.find({ headline: "Merry Christmas from The Tech Report staff!"})
-    .then(doc => {
-        res.json(doc)
+    Article.find()
+    .then(articles => {
+        res.json(articles)
     })
 })
 
