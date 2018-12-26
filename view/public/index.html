@@ -35,9 +35,9 @@
                     <p>{{ comment }}</p>
                     <button class="btn--delete">X</button>
                 </div>
-                <form class="add--comment">
+                <form id="comment--form">
                     <textarea id="comment--box" cols="30" rows="10"></textarea>
-                    <button @click="postComment(article._id)" type="submit">Submit</button>
+                    <button @click="postComment(article._id, article.comments)" type="submit">Submit</button>
                 </form>
             </section>
 
