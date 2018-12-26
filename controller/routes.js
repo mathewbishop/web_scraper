@@ -17,9 +17,10 @@ router.get("/scrape", (req, res) => {
 // Get Articles from Database
 //============================================================
 router.get("/articles", (req, res) => {
-    let newsArticles = Article.find({})
-    res.json(newsArticles);
-    // res.end()
+    Article.find({ headline: "Merry Christmas from The Tech Report staff!"})
+    .then(doc => {
+        res.json(doc)
+    })
 })
 
 module.exports = router;

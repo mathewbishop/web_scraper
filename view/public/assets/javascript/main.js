@@ -11,8 +11,8 @@ const vm = new Vue({
         fetchArticles: function() {
             fetch("/articles")
             .then(response => response.json())
-            .then(data => {console.log(data)})
-            // .catch(err => console.log(err))
+            .then(data => console.log(data))
+            .catch(err => console.log(err))
         }
     }
 })
