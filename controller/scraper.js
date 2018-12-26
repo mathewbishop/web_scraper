@@ -3,8 +3,6 @@
 //============================================================
 const axios = require("axios");
 const cheerio = require("cheerio");
-const mongoose = require("mongoose");
-let db = mongoose.connection;
 const Article = require("../model/articleModel");
 //============================================================
 // Scraper Function
