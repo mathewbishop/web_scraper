@@ -9,23 +9,40 @@
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
         <img src="./assets/images/transistor-40613_640.png" alt="Diagram of an electrical transistor.">
         <h1>Transistor</h1>
         <p>Trending tech news.</p>
     </header>
 
+    <!-- SCRAPE BUTTON -->
     <section>
         <button>Scrape</button>
     </section>
 
+    <!-- MAIN/APP -->
     <main id="app">
+
+        <!-- ARTICLE -->
         <article>
             <h1></h1>
             <a href=""></a>
+
+            <!-- COMMENT SECTION -->
+            <section class="comment--section">
+                <div class="comments"></div>
+                <form class="add--comment">
+                    <textarea id="comment--box" cols="30" rows="10"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
         </article>
+
     </main>
     
+    <!-- FOOTER -->
     <footer>
         <small>Currently scraping from <a href="https://techreport.com/">The Tech Report</a></small>
         <p>Built by <a href="https://mathewbishop.com/">mathew bishop.</a></p>
