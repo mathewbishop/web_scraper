@@ -34,7 +34,15 @@ const vm = new Vue({
             thisArticleComments.push(newComment.comment)
         },
         deleteComment: function(id, thisArticleComments, comment) {
-            
+            let commentID = {
+                comment: comment,
+                id: id
+            }
+            fetch("/comment", {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(commentID)
+            })
             let commentsArray = thisArticleComments
             let index = commentsArray.indexOf(comment)
             commentsArray.splice(index, 1)

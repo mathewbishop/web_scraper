@@ -38,5 +38,19 @@ router.post("/comment", (req, res) => {
     )
     res.end()
 })
-
+//============================================================
+// DELETE Comment
+//============================================================
+router.delete("/comment", (req, res) => {
+    let comment = req.body.comment
+    let id = req.body.id
+    Article.updateOne(
+        { _id: id },
+        { $pull: { comments: comment } },
+        (err) => {
+            if (err) console.log(err)
+        } 
+    )
+    res.end()
+})
 module.exports = router;
