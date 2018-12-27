@@ -18,7 +18,7 @@ const vm = new Vue({
             })
             .catch(err => console.log(err))
         },
-        postComment: function(id, thisArticleComments) {
+        postComment: function(id, commentsArray) {
             event.preventDefault()
             let newComment = {
                 comment: document.getElementById("comment--box").value,
@@ -31,9 +31,9 @@ const vm = new Vue({
                 body: JSON.stringify(newComment)
             })
             document.getElementById("comment--form").reset()
-            thisArticleComments.push(newComment.comment)
+            commentsArray.push(newComment.comment)
         },
-        deleteComment: function(id, thisArticleComments, comment) {
+        deleteComment: function(id, commentsArray, comment) {
             let commentID = {
                 comment: comment,
                 id: id
@@ -43,7 +43,6 @@ const vm = new Vue({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(commentID)
             })
-            let commentsArray = thisArticleComments
             let index = commentsArray.indexOf(comment)
             commentsArray.splice(index, 1)
         }
