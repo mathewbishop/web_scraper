@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/pulse/bulmaswatch.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Web Scraper</title>
 </head>
 <body>
     <div>
         <!-- HEADER -->
-        <header class="columns">
+        <header class="columns has-background-grey-dark">
                 <div class="column is-one-quarter">
                     <img class="header-img" src="./assets/images/transistor-40613_640.png" alt="Diagram of an electrical transistor.">
                 </div>
                 <section class="column">
-                    <h1 class="title">Transistor</h1>
-                    <p class="subtitle">Trending tech news.</p>
+                    <h1 class="title has-text-primary">Transistor</h1>
+                    <p class="subtitle has-text-black-bis">Trending tech news.</p>
                 </section>
         </header>
 
         <!-- SCRAPE BUTTON -->
-        <section class="columns is-centered is-mobile">
-            <div class="column is-1">
-                <button class="button is-dark">Scrape New Articles</button>
+        <section class="columns">
+            <div class="column has-text-centered">
+                <button class="button is-primary scrape-btn">Scrape New Articles</button>
             </div>
         </section>
 
         <!-- MAIN/APP -->
         <main id="app" class="columns is-centered">
-            <div v-for="article in articles" class="column is-10 is-mobile">
+            <div v-for="article in articles" class="column is-8 has-text-centered">
             <!-- ARTICLE -->
                 <article>
                     <h1>{{ article.headline }}</h1>
@@ -53,8 +53,8 @@
         </main>
 
         <!-- FOOTER -->
-        <footer class="">
-            <div class="has-text-centered">
+        <footer class="columns">
+            <div class="column has-text-centered">
                 <small>Currently scraping from <a href="https://techreport.com/">The Tech Report</a></small>
                 <p>Built by <a href="https://mathewbishop.com/">mathew bishop.</a></p>
             </div>

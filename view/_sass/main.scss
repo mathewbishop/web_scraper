@@ -7,22 +7,20 @@ $fontsize-1: 1.999rem;
 $fontsize-2: 3.552rem;
 $fontsize-3: 4.735rem;
 $fontsize-4: 6.312rem;
-
-
-html {
-    min-height: 100%;
-    position: relative;
-}
 //============================================================
 // Page Header
 //============================================================
 header { padding: 2rem; }
 .header-img { width: 100%; height: auto; }
 .title { font-size: $fontsize-4; margin-left: 2rem; }
-.subtitle { font-size: $fontsize-base; margin-left: 4rem; }
+.subtitle { font-size: $fontsize-1; margin-left: 4rem; }
 @media screen and (max-width: 790px) {
     .title { font-size: $fontsize-3; }
 }
+//============================================================
+// Scrape Button
+//============================================================
+.scrape-btn { margin: 4rem 0; }
 //============================================================
 // Footer
 //============================================================
