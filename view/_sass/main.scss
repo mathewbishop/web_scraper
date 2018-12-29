@@ -1,0 +1,31 @@
+//============================================================
+// Type Scale
+//============================================================
+$fontsize-small: .844rem;
+$fontsize-base: 1.125rem;
+$fontsize-1: 1.999rem;
+$fontsize-2: 3.552rem;
+$fontsize-3: 4.735rem;
+$fontsize-4: 6.312rem;
+
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+//============================================================
+// Page Header
+//============================================================
+header { padding: 2rem; }
+.header-img { width: 100%; height: auto; }
+.title { font-size: $fontsize-4; margin-left: 2rem; }
+.subtitle { font-size: $fontsize-base; margin-left: 4rem; }
+@media screen and (max-width: 790px) {
+    .title { font-size: $fontsize-3; }
+}
+//============================================================
+// Footer
+//============================================================
+footer { margin-top: 5rem; }
+
+

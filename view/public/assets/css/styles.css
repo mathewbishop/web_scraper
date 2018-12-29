@@ -1,0 +1,26 @@
+html {
+  min-height: 100%;
+  position: relative; }
+
+header {
+  padding: 2rem; }
+
+.header-img {
+  width: 100%;
+  height: auto; }
+
+.title {
+  font-size: 6.312rem;
+  margin-left: 2rem; }
+
+.subtitle {
+  font-size: 1.125rem;
+  margin-left: 4rem; }
+
+@media screen and (max-width: 790px) {
+  .title {
+    font-size: 4.735rem; } }
+footer {
+  margin-top: 5rem; }
+
+/*# sourceMappingURL=styles.css.map */

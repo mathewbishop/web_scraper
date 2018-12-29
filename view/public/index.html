@@ -4,52 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/pulse/bulmaswatch.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Web Scraper</title>
 </head>
 <body>
-
-    <!-- HEADER -->
-    <header>
-        <img src="./assets/images/transistor-40613_640.png" alt="Diagram of an electrical transistor.">
-        <h1>Transistor</h1>
-        <p>Trending tech news.</p>
-    </header>
-
-    <!-- SCRAPE BUTTON -->
-    <section>
-        <button>Scrape</button>
-    </section>
-
-    <!-- MAIN/APP -->
-    <main id="app">
-        <div v-for="article in articles">
-        <!-- ARTICLE -->
-            <article>
-                <h1>{{ article.headline }}</h1>
-                <a :href="article.url">Read Article</a>
-
-                <!-- COMMENT SECTION -->
-                <section class="comment--section">
-                    <div class="comments" v-for="comment in article.comments">
-                        <p>{{ comment }}</p>
-                        <button @click="deleteComment(article._id, article.comments, comment)" class="btn--delete">X</button>
-                    </div>
-                    <form id="comment--form">
-                        <textarea id="comment--box" cols="30" rows="10"></textarea>
-                        <button @click="postComment(article._id, article.comments)" type="submit">Submit</button>
-                    </form>
+    <div>
+        <!-- HEADER -->
+        <header class="columns">
+                <div class="column is-one-quarter">
+                    <img class="header-img" src="./assets/images/transistor-40613_640.png" alt="Diagram of an electrical transistor.">
+                </div>
+                <section class="column">
+                    <h1 class="title">Transistor</h1>
+                    <p class="subtitle">Trending tech news.</p>
                 </section>
+        </header>
 
-            </article>
-        </div>
-    </main>
+        <!-- SCRAPE BUTTON -->
+        <section class="columns is-centered is-mobile">
+            <div class="column is-1">
+                <button class="button is-dark">Scrape New Articles</button>
+            </div>
+        </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <small>Currently scraping from <a href="https://techreport.com/">The Tech Report</a></small>
-        <p>Built by <a href="https://mathewbishop.com/">mathew bishop.</a></p>
-    </footer>
+        <!-- MAIN/APP -->
+        <main id="app" class="columns is-centered">
+            <div v-for="article in articles" class="column is-10 is-mobile">
+            <!-- ARTICLE -->
+                <article>
+                    <h1>{{ article.headline }}</h1>
+                    <a :href="article.url">Read Article</a>
+
+                    <!-- COMMENT SECTION -->
+                    <section class="comment--section">
+                        <div class="comments" v-for="comment in article.comments">
+                            <p>{{ comment }}</p>
+                            <button @click="deleteComment(article._id, article.comments, comment)" class="btn--delete">X</button>
+                        </div>
+                        <form id="comment--form">
+                            <textarea id="comment--box" cols="30" rows="10"></textarea>
+                            <button @click="postComment(article._id, article.comments)" type="submit">Submit</button>
+                        </form>
+                    </section>
+
+                </article>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="">
+            <div class="has-text-centered">
+                <small>Currently scraping from <a href="https://techreport.com/">The Tech Report</a></small>
+                <p>Built by <a href="https://mathewbishop.com/">mathew bishop.</a></p>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./assets/javascript/main.js"></script>
