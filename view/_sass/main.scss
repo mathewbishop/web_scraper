@@ -22,6 +22,31 @@ header { padding: 2rem; }
 //============================================================
 .scrape-btn { margin: 4rem 0; }
 //============================================================
+// Main
+//============================================================
+article { 
+    max-width: 40rem;
+    margin: 1rem auto;
+    padding: .5rem;
+    h1 { font-size: $fontsize-1; }
+    a { font-size: $fontsize-base; font-weight: bold; }
+    .comment--section { 
+        margin-top: 3rem;
+        h2 { font-size: $fontsize-base; text-align: left; margin-left: .5rem; font-weight: bold; } 
+        .comment { 
+            border: 1px solid black; 
+            margin: 1rem auto; 
+            max-width: 95%;
+            text-align: left;
+            .delete-btn { display: block; }
+            p { margin-top: .5rem; padding: .5rem; }
+        }
+        .comment-btn-wrapper { 
+            .post-comment-btn { margin-bottom: .5rem; }
+        }
+    }
+}
+//============================================================
 // Footer
 //============================================================
 footer { margin-top: 5rem; }

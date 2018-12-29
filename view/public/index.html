@@ -29,28 +29,53 @@
         </section>
 
         <!-- MAIN/APP -->
-        <main id="app" class="columns is-centered">
-            <div v-for="article in articles" class="column is-8 has-text-centered">
-            <!-- ARTICLE -->
-                <article>
-                    <h1>{{ article.headline }}</h1>
-                    <a :href="article.url">Read Article</a>
+        <!-- <main id="app" class="columns is-centered"> -->
+            <div class="column has-text-centered">
+                <!-- <div v-for="article in articles"> -->
+                <!-- ARTICLE -->
+                    <article class="has-background-grey-light">
+                        <h1>{{ article.headline }}</h1>
+                        <a :href="article.url" class="has-text-primary">Read Article</a>
 
-                    <!-- COMMENT SECTION -->
-                    <section class="comment--section">
-                        <div class="comments" v-for="comment in article.comments">
-                            <p>{{ comment }}</p>
-                            <button @click="deleteComment(article._id, article.comments, comment)" class="btn--delete">X</button>
-                        </div>
-                        <form id="comment--form">
-                            <textarea id="comment--box" cols="30" rows="10"></textarea>
-                            <button @click="postComment(article._id, article.comments)" type="submit">Submit</button>
-                        </form>
-                    </section>
+                        <!-- COMMENT SECTION -->
+                        <section class="comment--section">
+                            <h2>Comments</h2>
+                            <div class="comment" v-for="comment in article.comments">
+                                <button @click="deleteComment(article._id, article.comments, comment)" class="button is-danger delete-btn">X</button>
+                                <p>{{ comment }}</p>
+                            </div>
+                            <form id="comment--form">
+                                <textarea id="comment--box" cols="50" rows="5"></textarea>
+                                <div class="comment-btn-wrapper">
+                                    <button @click="postComment(article._id, article.comments)" type="submit" class="button is-success post-comment-btn">Submit</button>
+                                </div>
+                            </form>
+                        </section>
 
-                </article>
-            </div>
-        </main>
+                    </article>
+                    <article class="has-background-grey-light">
+                            <h1>Test Headline is a test headline.</h1>
+                            <a :href="article.url" class="has-text-primary">Read Article</a>
+    
+                            <!-- COMMENT SECTION -->
+                            <section class="comment--section">
+                                <div class="comment" v-for="comment in article.comments">
+                                    <button @click="deleteComment(article._id, article.comments, comment)" class="button is-danger delete-btn">X</button>
+                                    <p>Test Comment</p>
+                                </div>
+                                <form id="comment--form">
+                                    <textarea id="comment--box" cols="50" rows="5"></textarea>
+                                    <div class="comment-btn-wrapper">
+                                        <button @click="postComment(article._id, article.comments)" type="submit" class="button is-success post-comment-btn">Submit</button>
+                                    </div>
+                                </form>
+                            </section>
+    
+                        </article>
+
+                </div>
+            <!-- </div> -->
+        <!-- </main> -->
 
         <!-- FOOTER -->
         <footer class="columns">

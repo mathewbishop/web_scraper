@@ -19,6 +19,35 @@ header {
 .scrape-btn {
   margin: 4rem 0; }
 
+article {
+  max-width: 40rem;
+  margin: 1rem auto;
+  padding: .5rem; }
+  article h1 {
+    font-size: 1.999rem; }
+  article a {
+    font-size: 1.125rem;
+    font-weight: bold; }
+  article .comment--section {
+    margin-top: 3rem; }
+    article .comment--section h2 {
+      font-size: 1.125rem;
+      text-align: left;
+      margin-left: .5rem;
+      font-weight: bold; }
+    article .comment--section .comment {
+      border: 1px solid black;
+      margin: 1rem auto;
+      max-width: 95%;
+      text-align: left; }
+      article .comment--section .comment .delete-btn {
+        display: block; }
+      article .comment--section .comment p {
+        margin-top: .5rem;
+        padding: .5rem; }
+    article .comment--section .comment-btn-wrapper .post-comment-btn {
+      margin-bottom: .5rem; }
+
 footer {
   margin-top: 5rem; }
 
