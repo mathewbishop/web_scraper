@@ -32,8 +32,7 @@ article {
     margin-top: 3rem; }
     article .comment--section h2 {
       font-size: 1.125rem;
-      text-align: left;
-      margin-left: .5rem;
+      margin-bottom: .5rem;
       font-weight: bold; }
     article .comment--section .comment {
       border: 1px solid black;

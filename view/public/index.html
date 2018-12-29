@@ -29,9 +29,9 @@
         </section>
 
         <!-- MAIN/APP -->
-        <!-- <main id="app" class="columns is-centered"> -->
+        <main id="app" class="columns">
             <div class="column has-text-centered">
-                <!-- <div v-for="article in articles"> -->
+                <div v-for="article in articles">
                 <!-- ARTICLE -->
                     <article class="has-background-grey-light">
                         <h1>{{ article.headline }}</h1>
@@ -53,11 +53,11 @@
                         </section>
 
                     </article>
-                    <article class="has-background-grey-light">
+                    <!-- <article class="has-background-grey-light">
                             <h1>Test Headline is a test headline.</h1>
                             <a :href="article.url" class="has-text-primary">Read Article</a>
     
-                            <!-- COMMENT SECTION -->
+                            
                             <section class="comment--section">
                                 <div class="comment" v-for="comment in article.comments">
                                     <button @click="deleteComment(article._id, article.comments, comment)" class="button is-danger delete-btn">X</button>
@@ -71,11 +71,11 @@
                                 </form>
                             </section>
     
-                        </article>
+                        </article> -->
 
                 </div>
-            <!-- </div> -->
-        <!-- </main> -->
+            </div>
+        </main>
 
         <!-- FOOTER -->
         <footer class="columns">
