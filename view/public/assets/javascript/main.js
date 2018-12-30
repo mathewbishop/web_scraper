@@ -21,17 +21,17 @@ const vm = new Vue({
         postComment: function(id, commentsArray) {
             event.preventDefault()
             let newComment = {
-                comment: document.getElementById("comment--box").value,
+                comment: document.getElementById(id).value,
                 id: id
             } 
-            console.log(newComment)
             fetch("/comment", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newComment)
             })
-            document.getElementById("comment--form").reset()
             commentsArray.push(newComment.comment)
+            let commentBox = document.querySelectorAll("textarea");
+            commentBox.forEach(item => { item.value = ""; })
         },
         deleteComment: function(id, commentsArray, comment) {
             let commentID = {
