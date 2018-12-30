@@ -44,7 +44,7 @@
                                 <button @click="deleteComment(article._id, article.comments, comment)" class="button is-danger delete-btn">X</button>
                                 <p>{{ comment }}</p>
                             </div>
-                            <form class="comment--form">
+                            <form>
                                 <textarea :id="article._id" cols="50" rows="5"></textarea>
                                 <div class="comment-btn-wrapper">
                                     <button @click="postComment(article._id, article.comments)" type="submit" class="button is-success post-comment-btn">Submit</button>
