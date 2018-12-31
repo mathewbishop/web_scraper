@@ -45,6 +45,12 @@ const vm = new Vue({
             })
             let index = commentsArray.indexOf(comment)
             commentsArray.splice(index, 1)
+        },
+        scrape: function() {
+            fetch("/scrape")
+            .then(response => console.log(response))
+            .catch(err => console.log(err))
+            setTimeout("window.location.reload()", 1500)
         }
     }
 })

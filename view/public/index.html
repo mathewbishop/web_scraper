@@ -9,7 +9,8 @@
     <title>Web Scraper</title>
 </head>
 <body>
-    <div>
+    <!-- VUE INSTANCE CONTAINER -->
+    <div id="app">
         <!-- HEADER -->
         <header class="columns has-background-grey-dark">
                 <div class="column is-one-quarter">
@@ -24,12 +25,12 @@
         <!-- SCRAPE BUTTON -->
         <section class="columns">
             <div class="column has-text-centered">
-                <button class="button is-primary scrape-btn">Scrape New Articles</button>
+                <button @click="scrape()" class="button is-primary scrape-btn">Scrape New Articles</button>
             </div>
         </section>
 
         <!-- MAIN/APP -->
-        <main id="app" class="columns">
+        <main class="columns">
             <div class="column has-text-centered">
                 <div v-for="article in articles">
                 <!-- ARTICLE -->
@@ -84,6 +85,7 @@
                 <p>Built by <a href="https://mathewbishop.com/">mathew bishop.</a></p>
             </div>
         </footer>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

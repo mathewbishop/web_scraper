@@ -10,7 +10,6 @@ const Article = require("../model/articleModel");
 //============================================================
 router.get("/scrape", (req, res) => {
     scrape();
-    console.log("Test pass.")
     res.end()
 })
 //============================================================
