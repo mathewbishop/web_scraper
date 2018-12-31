@@ -32,7 +32,7 @@
         <!-- MAIN/APP -->
         <main class="columns">
             <div class="column has-text-centered">
-                <div v-for="article in articles">
+                <div v-for="article in articles.slice(0, 10)">
                 <!-- ARTICLE -->
                     <article class="has-background-grey-light">
                         <h1>{{ article.headline }}</h1>
@@ -54,7 +54,7 @@
                         </section>
 
                     </article>
-                    
+
                 </div>
             </div>
         </main>
