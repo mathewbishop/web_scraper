@@ -2,4 +2,16 @@
 Discuss the latest scraped stories.
 
 # Description
-Transistor is a place to read and comment on the latest tech news (from [The Tech Report](https://techreport.com/)). At the core of this application is a web scraper function. This function is used to scrape the latest stories from [The Tech Report](https://techreport.com/) and display them on Transistor's UI. 
+This project was an exercise for me to get familiar with MongoDB and with the concept and implementation of web scraping.
+
+Transistor is a place to read and comment on the latest tech news (from [The Tech Report](https://techreport.com/)). At the core of this application is a web scraper function. This function is used to scrape the latest stories from [The Tech Report](https://techreport.com/) and display them on Transistor's UI.
+
+# Usage
+The user can:
+
+1. Click on links to read the articles referenced/displayed on the UI
+2. Comment on articles
+3. Delete comments
+4. Scrape for new stories
+
+# Tech Stack
