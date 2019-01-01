@@ -1,4 +1,4 @@
-# Transistor
+# Transistor ![](https://cdn.pixabay.com/photo/2012/04/24/17/43/transistor-40613_960_720.png)
 Discuss the latest scraped stories.
 
 # Description
