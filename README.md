@@ -1,5 +1,5 @@
 # Transistor ![](https://cdn.pixabay.com/photo/2012/04/24/17/43/transistor-40613_960_720.png)
-Discuss the latest scraped stories.
+Discuss the latest scraped stories. Click [here](https://transistor-webscraper.herokuapp.com/) to visit.
 
 # Description
 This project was an exercise for me to get familiar with MongoDB and with the concept and implementation of web scraping.
