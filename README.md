@@ -15,3 +15,11 @@ The user can:
 4. Scrape for new stories
 
 # Tech Stack
+
+1. Node.js
+2. Express.js
+3. MongoDB
+4. Vue.js
+5. Cheerio.js
+6. Sass
+7. HTML
